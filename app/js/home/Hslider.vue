@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="$style.hslider">
       <slider :items="items" :cname="$style.slider" :options="options"></slider>
       <div :class="$style.list">
           <div :class="$style.item" v-for="item in enters">
@@ -71,6 +71,9 @@ export default {
 </script>
 <style lang="scss" module>
 @import "../../css/element.scss";
+.hslider{
+    padding-top:100px;
+}
 .slider{
    margin-top:100px;
    img{
