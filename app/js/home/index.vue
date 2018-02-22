@@ -4,7 +4,7 @@
         <Slider></Slider>
         <novice></novice>
         <borrow></borrow>
-        <money></money>
+        <money :title="title" :items="items"></money>
         <product></product>
         <service></service> 
         <vfooter></vfooter> 
@@ -30,6 +30,37 @@ export default {
     product,
     service,
     vfooter:footer
+  },
+  data(){
+    return{
+          title:"理财精选",
+          items:[
+              {
+                  title:"定期理财",
+                  sub:"理财首选",
+                  rate:"5.60%",
+                  text:"历史年化回报率"
+              },
+              {
+                  title:"小白理财",
+                  sub:"理财首选",
+                  rate:"4.22%",
+                  text:"7日年化收益率"
+              },
+              {
+                  title:"月月盈",
+                  sub:"养老保障",
+                  rate:"5%",
+                  text:"七日年化收益率"
+              },
+              {
+                  title:"小白基金",
+                  sub:"天天赚钱",
+                  rate:"4.27%",
+                  text:"7日年化收益率"
+              }
+          ]
+    }
   }
 }
 </script>

@@ -27,7 +27,7 @@ export default {
                 },
                 {
                     src:'//img12.360buyimg.com/jrpmobile/jfs/t3343/179/621044750/1484/5af6b11a/580f50e4N005181d0.png?width=66&height=66',
-                    href:'/home',
+                    href:'/IOUs',
                     des:'白条'
                 },
                 {

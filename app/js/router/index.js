@@ -2,6 +2,7 @@ import Vue from "vue"
 import Router from "vue-router"
 import Home from "../home/index.vue"
 import financial from "../financial/financial.vue"
+import IOUs from "../IOUs/IOUs.vue"
 import "../../css/reset.scss"
 Vue.use(Router)
 
@@ -21,6 +22,11 @@ export default new Router({
             path: "/home",
             name: "Home",
             component: Home,
+        },
+        {
+            path: "/IOUs",
+            name: "IOUs",
+            component: IOUs,
         }
     ],
 })
