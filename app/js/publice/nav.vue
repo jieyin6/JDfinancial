@@ -22,7 +22,7 @@ export default {
                 },
                 {
                     src:'//img12.360buyimg.com/jrpmobile/jfs/t3811/55/345433999/2930/116d3dd1/580f1e25N028a1f2c.png?width=66&height=66',
-                    href:'/home',
+                    href:'/financial',
                     des:'理财'
                 },
                 {
@@ -86,4 +86,6 @@ export default {
     right: 0;
     z-index: 100;
 }
+
 </style>
+
