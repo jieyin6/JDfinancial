@@ -75,6 +75,7 @@ export default {
         position: absolute;
         top:-70px;
         right:40px;
+        
     }
 }
 </style>

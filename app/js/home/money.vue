@@ -2,7 +2,7 @@
     <panel :title="title" :class="$style.panel">
       <div :class="$style.container">
           <dl :class="$style.item" v-for="item in items">
-              <router-link :to="/home">
+              <router-link to="/home">
                 <dt>{{item.title}}<span :class="$style.red">{{item.sub}}</span></dt>
                 <dd>{{item.rate}}</dd>
                 <dd>{{item.text}}</dd>

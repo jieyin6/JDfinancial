@@ -5,7 +5,9 @@
         <novice></novice>
         <borrow></borrow>
         <money></money>
-        <product></product> 
+        <product></product>
+        <service></service> 
+        <vfooter></vfooter> 
     </div>
 </template>
 
@@ -16,6 +18,8 @@ import novice from './novice'
 import borrow from './borrow'
 import money from './money'
 import product from './product'
+import service from './service'
+import footer from '../publice/footer'
 export default {
   components: {
     vHeader,
@@ -23,7 +27,9 @@ export default {
     novice,
     borrow,
     money,
-    product
+    product,
+    service,
+    vfooter:footer
   }
 }
 </script>
