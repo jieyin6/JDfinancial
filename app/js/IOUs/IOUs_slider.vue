@@ -38,7 +38,7 @@ export default {
 <style lang="scss" module>
 @import "../../css/element.scss";
 .fslider{
-    padding-top:100px;
+    padding-top:200px;
 }
 .slider{
    img{

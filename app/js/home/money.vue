@@ -41,7 +41,7 @@ export default {
         height: 0px;
         width:100%;
         box-sizing: border-box;
-        border:1px solid #ddd;
+        border:1px solid #eee;
         position: relative;
         top:-208px;
     }

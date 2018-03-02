@@ -47,7 +47,7 @@ export default {
             height: 0;
             width: 100%;
             box-sizing: border-box;
-            border: 1px solid #DDD;
+            border: 1px solid #eee;
         }
         img{
             display: block;

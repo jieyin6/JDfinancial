@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div :class="$style.IOUs">
         <vheader></vheader>
         <slider></slider>
         <choice :title="title" :items="items"></choice>
@@ -47,6 +47,14 @@ export default {
   }
 }
 </script>
-<style lang="scss">
+<style lang="scss" module>
 @import "../../css/element.scss";
+.IOUs{
+    position: absolute;
+    left:0;
+    right:0;
+    bottom: 100px;
+    overflow: auto;
+    height:100%;
+}
 </style>

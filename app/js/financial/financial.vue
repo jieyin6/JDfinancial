@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="$style.financial">
     <vheader></vheader>
     <fslider></fslider>
     <bannar :src="top_bannar"></bannar>
@@ -112,6 +112,13 @@ export default {
   }
 }
 </script>
-<style lang="scss">
-
+<style lang="scss" module>
+.financial{
+    position: absolute;
+    left:0;
+    right:0;
+    bottom: 100px;
+    overflow: auto;
+    height:100%;
+}
 </style>

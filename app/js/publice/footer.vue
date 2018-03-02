@@ -1,7 +1,7 @@
 <template>
-  <panel :class="$style.panel">
+  <panel :class="[$style.panel,cname]">
       <ul :class="$style.container">
-          <li :class="$style.item">
+          <li :class="$style.item" v-show="des.bannar">
               <img :src="des.bannar" alt="">
           </li>
           <li :class="$style.des_border">
@@ -60,6 +60,10 @@ export default {
           ]
         };
       }
+    },
+    cname:{
+        type:String,
+        default:""
     }
   }
 };
@@ -84,11 +88,11 @@ export default {
 
 .des_content{
     @include flex(row);
+    padding-top:40px;
     background-color: rgb(245,245,245);
     li{
         width:33.3333%;
         text-align: center;
-        padding-top:40px;
         margin-bottom: 20px;
         img{
             width:90px;
@@ -113,7 +117,7 @@ export default {
         height: 0;
         width: 100%;
         box-sizing: border-box;
-        border: 1px solid #DDD;
+        border: 1px solid #eee;
     }
 }
 .desc{
