@@ -1,12 +1,14 @@
 <template>
   <div :class="$style.fslider">
       <slider :items="items" :cname="$style.slider" :options="options"></slider>
-  </div>
+  </div>  
 </template>
 <script>
-import slider from '../core/slider';
+import slider from '../core/slider'
+import panel from '../core/panel'
 export default {
   components: {
+      panel,
       slider
   },
   data(){
@@ -41,6 +43,7 @@ export default {
     padding-top:200px;
 }
 .slider{
+    margin-top: 20px;
    img{
        vertical-align:middle;
        width:100%;

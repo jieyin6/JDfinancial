@@ -3,6 +3,7 @@
         <vheader></vheader>
         <slider></slider>
         <choice :title="title" :items="items"></choice>
+        <service></service>
         <vfooter></vfooter>
     </div>
 </template>
@@ -12,13 +13,15 @@ import footer from '../publice/footer'
 import header from '../publice/header'
 import Ious_slider from './IOUs_slider'
 import choice from '../financial/choice'
+import service from '../IOUs/service'
 export default {
   components: {
       panel,
       vfooter:footer,
       vheader:header,
       slider:Ious_slider,
-      choice
+      choice,
+      service
   },
   data(){
       return{

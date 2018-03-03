@@ -4,6 +4,7 @@
       <slide :options="options"></slide>
       <daliy></daliy>
       <introduce></introduce>
+      <welfare></welfare>
       <vfooter :des="des" :cname="$style.change"></vfooter>
   </div>
 </template>
@@ -13,13 +14,15 @@ import Rslider from "../raise/Rsilder"
 import header from "../publice/header"
 import daliy from "../raise/daliy"
 import introduce from "../raise/introduce"
+import welfare from "../raise/welfare"
 export default {
   components: {
     vfooter:footer,
     vheader:header,
     slide:Rslider,
     daliy,
-    introduce
+    introduce,
+    welfare
   },
   data(){
     return{

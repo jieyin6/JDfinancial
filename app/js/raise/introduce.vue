@@ -103,6 +103,9 @@ export default {
 .item{
     box-sizing: border-box;
     margin-bottom: 40px;
+    &:nth-child(4){
+        margin-bottom: 0;
+    }
     img{
         width:100%;
         display: block;
