@@ -1,16 +1,19 @@
 <template>
   <div id="app">
-    <router-view/>
-    <vnav></vnav>
+    <m-header></m-header>
+    <router-view></router-view>
+    <f-nav></f-nav>
   </div>
 </template>
 
 <script>
-import nav from '../js/publice/nav'
+import mHeader from './components/m-header/m-header'
+import fNav from './components/f-nav/f-nav'
 export default {
   name: 'app',
   components: {
-    vnav:nav
+    fNav,
+    mHeader
   }
 }
 </script>

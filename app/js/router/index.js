@@ -1,9 +1,11 @@
 import Vue from "vue"
 import Router from "vue-router"
-import Home from "../home/index.vue"
-import financial from "../financial/financial.vue"
-import IOUs from "../IOUs/IOUs.vue"
-import raise from "../raise/raise.vue"
+import mine from '../components/mine/mine'
+import manage from '../components/manage/manage'
+import index from '../components/index/index'
+import crowdFunding from '../components/crowd-funding/crowd-funding'
+import blankNote from '../components/blank-note/blank-note'
+
 import "../../css/reset.scss"
 Vue.use(Router)
 
@@ -12,27 +14,28 @@ export default new Router({
     routes: [
         {
             path: "/",
-            redirect:"/home"
+            redirect:"/index"
         },
         {
-            path:"/financial",
-            name:"financial",
-            component: financial 
+            path:'/index',
+            component:index
         },
         {
-            path: "/home",
-            name: "Home",
-            component: Home,
+            path:'/manage',
+            component:manage
         },
         {
-            path: "/IOUs",
-            name: "IOUs",
-            component: IOUs,
+            path:'/blank-note',
+            component:blankNote
         },
         {
-            path:"/raise",
-            name:"raise",
-            component: raise 
+            path:'/crowd-funding',
+            component:crowdFunding
+        },
+        {
+            path:'/mine',
+            component:mine
         }
+        
     ],
 })
