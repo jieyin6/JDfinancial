@@ -24,13 +24,14 @@ export default {
     top: 0;
     left: 0;
     right: 0;
-    height: 50px;
-    line-height: 50px;
+    height: 100px;
+    line-height: 100px;
     background: #fff;
+    z-index: 999;
         .left-wrapper{
             position: absolute;
-            left: 12px;
-            font-size: 14px;
+            left: 24px;
+            font-size: 28px;
             color: #666;
         }
         .center-wrapper{
@@ -39,20 +40,20 @@ export default {
             top: 50%;
             img{
                 display: block;
-                width: 105px;
-                margin-left:-52px; 
-                margin-top: -16px;
+                width: 210px;
+                margin-left:-104px; 
+                margin-top: -32px;
             }
         }
         .right-wrapper{
             position: absolute;
             top: 50%;
-            right: 12px;
-            width: 60px;
-            height: 28px;
-            margin-top: -14px;
-            font-size: 12px;
-            line-height: 28px;
+            right: 24px;
+            width: 120px;
+            height: 56px;
+            margin-top: -28px;
+            font-size: 24px;
+            line-height: 56px;
             text-align: center;
             color: #fff;
             background: #f04752;
