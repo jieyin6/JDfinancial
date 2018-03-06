@@ -1,7 +1,8 @@
 <template>
   <div class="module">
-      <div class="title-wrapper" v-show="title">
-          <span class="title">- {{title}} -</span>
+      <div class="title-wrapper" v-show="title || leftTitle">
+          <span class="left-title" v-show="leftTitle">{{leftTitle}}</span>
+          <span class="title" v-show="title">- {{title}} -</span>
           <span class="more" v-show="more">{{more}}</span>
       </div>
       <div class="content-wrapper">
@@ -20,6 +21,10 @@ export default {
         more:{
             type:String,
             default:''
+        },
+        leftTitle:{
+            type:String,
+            default:''
         }
     }
 
@@ -36,6 +41,12 @@ export default {
         position: relative;
         height: 112px;
         line-height: 112px;
+        .left-title{
+            position: absolute;
+            left: 32px;
+            font-size: 32px;
+            font-weight: 700;
+        }
         .title{
             position: absolute;
             left: 50%;

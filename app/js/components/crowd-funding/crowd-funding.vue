@@ -1,13 +1,36 @@
 <template>
-  
+  <div class="crowd-funding">
+    <c-header></c-header>
+    <recommend></recommend>
+    <more-welfare></more-welfare>
+    <bottom class="bottom"></bottom>
+</div>
 </template>
 
 <script>
+import cHeader from './cheader'
+import recommend from './recommend'
+import moreWelfare from './more-welfare'
+import bottom from '../base/bottom'
 export default {
-
+    components:{
+        cHeader,
+        recommend,
+        moreWelfare,
+        bottom
+    },
+    data(){
+        return{
+        }      
+    }
 }
 </script>
 
-<style>
-
+<style lang='scss'>
+.crowd-funding{
+    margin: 100px 0;
+    .bottom{
+        margin-top: -40px;
+    }
+}
 </style>
