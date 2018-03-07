@@ -1,8 +1,8 @@
 <template>
   <div class="blank-note-wrapper">
-      <module :title="noteTitle">
+      <module :title="noteItem.noteTitle">
           <ul>
-              <li v-for="item in welfare" :key="item.name" class="note-item">
+              <li v-for="item in noteItem.welfare" :key="item.name" class="note-item">
                   <img :src="item.icon">
                   <div class="note-content">
                       <h2>{{item.name}}</h2>
@@ -18,28 +18,18 @@
 <script>
 import module from '../base/module'
 export default {
+    props:{
+        noteItem:{
+            type:Object,
+            default(){
+                return {}
+            }
+        }
+    },
     components:{
         module
     },
-    data(){
-        return{
-            noteTitle:'白条福利',
-            welfare:[
-                {
-                    icon:'https://img12.360buyimg.com/jrpmobile/jfs/t4378/62/155957680/9017/16463551/58affd58Nb5c9198e.jpg?width=120&height=120',
-                    name:'开通白条',
-                    desc:'送百元礼包',
-                    right:'立即查看'
-                },
-                {
-                    icon:'https://img12.360buyimg.com/jrpmobile/jfs/t4270/96/1102370053/8651/58b7fa5a/58bd2e10N453e9464.jpg?width=120&height=120',
-                    name:'白条提额',
-                    desc:'金融app专享提额礼包',
-                    right:'去提额'
-                }
-            ]
-        }
-    }
+   
 }
 </script>
 

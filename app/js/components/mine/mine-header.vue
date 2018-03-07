@@ -17,27 +17,12 @@
 
 <script>
 export default {
-    data(){
-        return{
-            bottom:[
-                {
-                    name:'活期定期',
-                    desc:'0.00'
-                },
-                {
-                    name:'基金',
-                    desc:'0.00'
-                
-                },
-                {
-                    name:'京东小金库',
-                    desc:'立即开通'
-                },
-                {
-                    name:'小白理财',
-                    desc:'期限丰富 安全稳定'
-                }
-            ]
+    props:{
+        bottom:{
+            type:Array,
+            default(){
+                return []
+            }
         }
     }
 }

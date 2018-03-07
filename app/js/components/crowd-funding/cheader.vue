@@ -1,9 +1,9 @@
 <template>
    <div class="c-header">
-      <img src="https://img12.360buyimg.com/jrpmobile/jfs/t15760/134/2225069966/49339/a3f59b31/5a9919ceN910ed9c6.jpg?width=750&height=320">
-     <module :title="headerTitle" :more='more'>
+      <img :src='header.banner'>
+      <module :title="header.headerTitle" :more='header.more'>
          <ul>
-             <li v-for="pic in pics" :key="pic">
+             <li v-for="pic in header.pics" :key="pic">
                  <img :src='pic'>
              </li>
          </ul>
@@ -14,19 +14,18 @@
 <script>
 import module from '../base/module'
 export default {
+    props:{
+        header:{
+            type:Object,
+            default(){
+                return {}
+            }
+        }
+    },
     components:{
         module
     },
-    data(){
-        return{
-            headerTitle:'每日签到',
-            more:'不抢白不抢',
-            pics:[
-                'https://img12.360buyimg.com/jrpmobile/jfs/t3184/283/6032981290/37056/fa30c674/589bd5a2Nabdbbbd9.jpg?width=376&height=160',
-                'https://img12.360buyimg.com/jrpmobile/jfs/t3298/196/6130416421/33755/a0536d3e/589bd5d4Nf32e7adc.jpg?width=374&height=160'
-            ]
-        }
-    }
+    
 }
 </script>
 

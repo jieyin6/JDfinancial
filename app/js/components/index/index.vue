@@ -1,10 +1,10 @@
 <template>
   <div :class="$style.container">
-     <iheader></iheader>
-     <manage-money></manage-money>
-     <new-product></new-product>
-     <insurance></insurance>
-     <bottom :src='bottomPic'></bottom>
+     <iheader :sliderPic='index.sliderPic' :menu='index.menu'></iheader>
+     <manage-money :manageContent='index.manageContent'></manage-money>
+     <new-product :newProduct='index.newProduct'></new-product>
+     <insurance :insuranceContent='index.insuranceContent'></insurance>
+     <bottom :src='index.bottomPic'></bottom>
   </div>
 </template>
 
@@ -24,8 +24,18 @@ export default {
     },
     data(){
         return{
-           bottomPic:'https://img12.360buyimg.com/jrpmobile/jfs/t2842/350/3035567089/14791/5f6ff93d/577cf395N31e76288.png?width=1125&height=252'
+            index:{},
+           
         }
+    },
+    created(){
+        let _this = this
+        this.$http.get('/msg').then((res) => {
+             _this.index = res.data.index
+            console.log(_this.index)
+        }).catch((err)=>{
+            console.log(err)
+        })
     }
 
 }

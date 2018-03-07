@@ -1,8 +1,8 @@
 <template>
   <div :class="$style.container">
-    <c-header></c-header>
-    <recommend></recommend>
-    <more-welfare></more-welfare>
+    <c-header :header='crowdFunding.header'></c-header>
+    <recommend :recommend='crowdFunding.recommend'></recommend>
+    <more-welfare :moreWelfare='crowdFunding.moreWelfare'></more-welfare>
     <bottom class="bottom"></bottom>
 </div>
 </template>
@@ -21,7 +21,14 @@ export default {
     },
     data(){
         return{
+            crowdFunding:{}
         }      
+    },
+    created(){
+        let _this = this
+        this.$http.get('/msg').then((res)=>{
+            _this.crowdFunding = res.data.crowdFunding
+        })
     }
 }
 </script>

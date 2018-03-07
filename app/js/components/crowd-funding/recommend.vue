@@ -1,8 +1,8 @@
 <template>
   <div class="recommend">
-      <module :title="recommendTitle">
+      <module :title="recommend.recommendTitle">
           <ul class="recommend-item">
-             <li v-for="(good,index) in goods" :key="index" class="good-content">
+             <li v-for="(good,index) in recommend.goods" :key="index" class="good-content">
                  <img :src="good.banner">
                  <ul class="good-ul">
                      <li v-for="(item,index) in good.item" :key="index" class="item-content">
@@ -33,79 +33,19 @@
 <script>
 import module from '../base/module'
 export default {
+    props:{
+        recommend:{
+            type:Object,
+            default(){
+                return {}
+            }
+        }
+    },
     components:{
         module
     },
-    data(){
-        return{
-            recommendTitle:'In货推荐',
-             goods:[
-                {
-                    banner:'https://img12.360buyimg.com/jrpmobile/jfs/t3406/210/2247820735/50952/86016eea/5846d8e7N20446dbd.png?width=750&height=200',
-                    item:[{
-                        pic:'https://img30.360buyimg.com/cf/s250x250_jfs/t15595/15/2136732080/41551/b26c2916/5a7c54cdN4ad03299.jpg',
-                        name:'电动牙刷',
-                        price:'79.00',
-                        count:'155',
-                        select:true
-                        
-                    },
-                    {
-                        pic:'https://img30.360buyimg.com/cf/s250x250_jfs/t16168/161/1968909024/148686/2a85179/5a7be4bdN01533e62.jpg',
-                        name:'胶囊咖啡机',
-                        price:'11.00' ,
-                        count:'28',
-                        select:false
-
-                    }
-                    ]
-                },
-                {
-                    banner:'https://img12.360buyimg.com/jrpmobile/jfs/t3739/82/2244582797/54399/746c7d79/5846a953N66b67d05.png?width=750&height=200',
-                    item:[{
-                        pic:'https://img30.360buyimg.com/cf/s250x250_jfs/t13834/192/2625202072/70435/e5b85a62/5a460eefN94289190.jpg',
-                        name:'智能后视镜',    
-                        price:'90.00',
-                        count:'',
-                        select:false,
-                    },
-                    {
-                        pic:'https://img30.360buyimg.com/cf/s250x250_jfs/t5827/255/6140287884/111611/498f9693/59683808N9253369f.jpg',
-                        name:'GPD口袋电脑',
-                        price:'75.00',
-                        count:'0',
-                        select:false,
-                    }
-                    ]               
-                },
-                {
-                    banner:'https://img12.360buyimg.com/jrpmobile/jfs/t3214/113/4408032436/61548/ce316eef/5846d310Ne93f00c9.png?width=750&height=200',
-                    item:[
-                        {
-                            pic:'https://img30.360buyimg.com/cf/s250x250_jfs/t19087/67/359234055/152112/75036460/5a6ecc5fN565775cd.jpg',
-                            name:'层层轻薄雪花酥',
-                            price:'29.00',
-                            count:'369',
-                            select:false,
-                        },
-                        {
-                            pic:'https://img30.360buyimg.com/cf/s250x250_jfs/t14506/168/2096353267/153845/5bb0a2e6/5a6e9518N15da6f7c.jpg',
-                            name:'华礼脸茶',
-                            price:'29.00',
-                            count:'266',
-                            select:false,
-                        }
-                    ]               
-                }
-            ]
-        
-        }
-    },
-   computed:{
-       setwidth(){
-           return this.$refs.count.innerHTML 
-       }
-   }
+    
+   
 }
 </script>
 

@@ -20,7 +20,9 @@ export default {
         },
         pics:{
             type:Array,
-            default:[]
+            default(){
+                return []
+            }
         },
         options:{
              type:Object,

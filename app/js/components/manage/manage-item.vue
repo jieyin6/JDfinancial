@@ -1,8 +1,8 @@
 <template>
    <div class="manage-wrapper">
-         <module :title="manageTitle">
+         <module :title="manageItem.manageTitle">
              <ul>
-                 <li v-for="item in pick" :key="item.name" class="manage-item">
+                 <li v-for="item in manageItem.pick" :key="item.name" class="manage-item">
                      <img :src="item.icon">
                      <div class="manage-content">
                          <h2>{{item.name}}</h2>
@@ -18,31 +18,18 @@
 <script>
 import module from '../base/module'
 export default {
+    props:{
+        manageItem:{
+            type:Object,
+            default(){
+                return {}
+            }
+        }
+    },
     components:{
         module
     },
-    data(){
-        return{
-             manageTitle:'理财精选',
-            pick:[
-                {
-                    icon:'https://img12.360buyimg.com/jrpmobile/jfs/t3670/58/543125556/2606/a65096b9/580d80afN63b1085a.png?width=76&height=76',
-                    name:'月度理财',
-                    desc:'预期年化收益率4.50%'
-                },
-                {
-                    icon:'https://img12.360buyimg.com/jrpmobile/jfs/t3679/44/511862277/2728/c1c6b2bf/580d8189N6b6f8052.png?width=76&height=76',
-                    name:'季度理财',
-                    desc:'历史年化回报率5.50%'
-                },
-                {
-                    icon:'https://img12.360buyimg.com/jrpmobile/jfs/t3331/69/580199498/3074/d5bb21c5/580d7f6cN7f35e596.png?width=76&height=76',
-                    name:'一年理财',
-                    desc:'历史年化回报率5.80%'
-                }
-            ],
-        }
-    }
+   
 }
 </script>
 

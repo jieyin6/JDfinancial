@@ -1,8 +1,8 @@
 <template>
   <div :class="$style.container">
-      <mine-header></mine-header>
+      <mine-header :bottom='mine.bottom'></mine-header>
       <center></center>
-      <mine-more></mine-more>
+      <mine-more :mineMore='mine.mineMore'></mine-more>
       <bottom class="mine-bottom"></bottom>
   </div>
 </template>
@@ -18,6 +18,17 @@ export default {
         center,
         mineMore,
         bottom
+    },
+    data(){
+        return{
+            mine:{}
+        }
+    },
+    created(){
+        let _this = this
+        this.$http.get('/msg').then((res) => {
+            _this.mine = res.data.mine
+        })
     }
 }
 </script>
