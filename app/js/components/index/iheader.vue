@@ -52,15 +52,14 @@ export default {
 </script>
 
 <style lang='scss'>
-
+@import '../../../css/layout';
 .menu-wrapper{
         position: relative;
         padding-top:40px;
         margin-bottom: 20px; 
         background: #fff;
         ul{
-            display: flex;
-            justify-content: space-around;
+           @include flex();
             height: 146px;
             li{
                 img{

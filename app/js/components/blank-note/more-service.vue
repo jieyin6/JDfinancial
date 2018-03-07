@@ -1,7 +1,7 @@
 <template>
-  <div class="service-wrapper">
+  <div :class="$style.marginBottom">
       <module :title="serviceTitle">
-          <div class="service-content">
+          <div :class="$style.serviceContent">
               <ul>
                   <li v-for="item in service" :key="item.name">
                       <img :src="item.icon">
@@ -61,30 +61,8 @@ export default {
 }
 </script>
 
-<style lang='scss'>
-.service-wrapper{
-    margin-bottom: 20px;
-    .service-content{
-        padding-bottom: 40px;
-        ul{
-            display: flex;
-            flex-wrap: wrap;
-            li{ 
-                width: 25%;
-                height: 146px;
-                padding-bottom: 40px;
-                text-align: center;
-                img{
-                    width: 90px;
-                    height: 90px;
-                }
-                p{
-                    margin-top: 12px;
-                    font-size: 26px;
-                    color: #666;
-                }
-            }
-        }
-    }
-}
+<style lang='scss' module>
+@import '../../../css/element';
+    
+
 </style>

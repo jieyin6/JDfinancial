@@ -1,5 +1,6 @@
 <template>
-  <div class="more-wrapper">
+<div  :class="$style.moreWrapper">
+  <div :class="$style.serviceContent">
       <module :leftTitle='leftTitle'></module>
       <ul>
           <li v-for="(item,index) in service" :key="index">
@@ -8,6 +9,7 @@
           </li>
       </ul>
   </div>
+</div>
 </template>
 
 <script>
@@ -56,31 +58,8 @@ export default {
 }
 </script>
 
-<style lang='scss'>
-.more-wrapper{
-    position: relative;
-    top: 20px;
-    background-color: #fff;
-    ul{
-        display: flex;
-        flex-wrap: wrap;
-        padding-bottom: 40px;
-        li{
-            width: 25%;
-            text-align: center;
-            margin-bottom: 8px;
-            img{
-                display: block;
-                width: 90px;
-                height: 90px;
-                margin: 0 auto;
-            }
-            p{
-                margin-top: 12px;
-                font-size: 26px;
-                color: #666;
-            }
-        }
-    }
-}
+<style lang='scss' module>
+@import '../../../css/element';
+
+
 </style>

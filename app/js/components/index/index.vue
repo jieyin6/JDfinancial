@@ -1,5 +1,5 @@
 <template>
-  <div class="index">
+  <div :class="$style.container">
      <iheader></iheader>
      <manage-money></manage-money>
      <new-product></new-product>
@@ -31,9 +31,7 @@ export default {
 }
 </script>
 
-<style lang='scss'>
-.index{
-    margin:100px 0;
-    overflow: auto;
-    }
+<style lang='scss' module>
+@import '../../../css/element';
+
 </style>

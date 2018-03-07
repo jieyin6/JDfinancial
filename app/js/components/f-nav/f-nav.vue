@@ -1,7 +1,7 @@
 <template>
     <div class="f-nav">
     <div class="a-wrapper" >
-        <div v-for="(link,index) in links" :key="index" @click="changePic(index)">
+        <div v-for="(link,index) in links" :key="index" >
          <router-link :to='link.path' >
             <img :src="link.icon" ref="img">
             <p>{{link.name}}</p>
@@ -49,11 +49,7 @@ export default {
             ]
         }
     },
-    methods:{
-        changePic(index){
-            this.$refs.img.setAttribute('src',this.links[index].activeIcon) 
-        }
-    }
+   
 }
 </script>
 

@@ -111,7 +111,16 @@ export default {
 
 <style lang='scss'>
 .recommend{
-    border-bottom: 1px solid #ddd;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #eee;
+    }
     .recommend-item{
         .good-content{
             img{
@@ -125,7 +134,7 @@ export default {
                     background-color:rgba(0, 0, 0, .02);
                     position: relative;
                     &:last-child{
-                       margin: 0 20px 0 10px;
+                       margin: 0 20px 40px 10px;
                     }
                     img{
                         display: block;

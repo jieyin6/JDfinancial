@@ -37,6 +37,9 @@ export default {
     margin-bottom: 20px;
     padding-bottom: 40px;
     background: #fff;
+    img{
+        width: 100%;
+    }
     ul{
         display: flex;
         justify-content: space-around

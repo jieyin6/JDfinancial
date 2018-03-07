@@ -1,5 +1,5 @@
 <template>
-  <div class="mine">
+  <div :class="$style.container">
       <mine-header></mine-header>
       <center></center>
       <mine-more></mine-more>
@@ -22,13 +22,11 @@ export default {
 }
 </script>
 
-<style lang='scss'>
-.mine{
-    margin: 100px 0;
-    overflow: auto;
+<style lang='scss' module>
+@import '../../../css/element';
     .mine-bottom{
         position: relative;
         top: 20px;
     }
-}
+
 </style>

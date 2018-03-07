@@ -1,7 +1,7 @@
 <template>
-<div class="blank-note">
-  <div class="banner-wrapper">
-      <img src="https://img12.360buyimg.com/jrpmobile/jfs/t16798/322/621991060/49914/ec0d539b/5a991ebcN932c6731.jpg?width=750&height=320">
+<div :class="$style.container">
+  <div :class="$style.marginBottom">
+      <img :class="$style.img" src="https://img12.360buyimg.com/jrpmobile/jfs/t16798/322/621991060/49914/ec0d539b/5a991ebcN932c6731.jpg?width=750&height=320">
   </div>
   <note-item></note-item>
   <more-service></more-service>
@@ -27,12 +27,9 @@ export default {
 }
 </script>
 
-<style lang='scss'>
-.blank-note{
-    margin: 100px 0;
-    .banner-wrapper{
-        margin-bottom: 20px;
-    }
+<style lang='scss' module>
+@import '../../../css/element';
+    
    
-}
+
 </style>

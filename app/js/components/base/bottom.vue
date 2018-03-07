@@ -53,6 +53,7 @@ export default {
 </script>
 
 <style lang='scss'>
+@import '../../../css/layout';
 .bottom{
     .img-wrapper{
         img{
@@ -61,8 +62,7 @@ export default {
     }
     .bottom-content{
         .content-mode{
-            display: flex;
-            justify-content: space-around;
+            @include flex();
             padding: 40px 0 20px 0;
             border-bottom: 1px solid #ddd;
             img{

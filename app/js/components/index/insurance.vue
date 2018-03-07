@@ -59,6 +59,9 @@ export default {
         .insurance-banner{
             margin-top: 40px;
             padding-bottom: 40px;
+            img{
+                width: 100%;
+            }
         }
     }
 </style>

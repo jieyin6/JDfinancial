@@ -29,5 +29,8 @@ export default {
      .banner-top-wrapper{
         margin: 20px 0;
         background: #fff;
+        img{
+            width: 100%;
+        }
     }
 </style>

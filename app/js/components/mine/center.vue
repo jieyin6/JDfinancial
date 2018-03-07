@@ -77,7 +77,15 @@ export default {
                 height: 142px;
                 padding: 32px 32px 0;
                 box-sizing: border-box;
-                border-top: 1px solid #eee;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                    background-color: #eee;
+                }               
                 .item-name{
                     height: 44px;
                     line-height: 44px;
@@ -114,8 +122,14 @@ export default {
                     margin-top: -12px;
                     color: #eee;
                 }
-                &:nth-of-type(2n+1){
-                    border-right:1px solid #eee; 
+                &:nth-of-type(2n+1)::after{
+                   content: '';
+                   position: absolute;
+                   top: 0;
+                   right: 0;
+                   height: 100%;
+                   width: 1px;
+                   background-color: #eee;
                 }
                
               }

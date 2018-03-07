@@ -1,5 +1,5 @@
 <template>
-  <div class="crowd-funding">
+  <div :class="$style.container">
     <c-header></c-header>
     <recommend></recommend>
     <more-welfare></more-welfare>
@@ -26,11 +26,11 @@ export default {
 }
 </script>
 
-<style lang='scss'>
-.crowd-funding{
-    margin: 100px 0;
+<style lang='scss' module>
+@import '../../../css/element' ;
+    
     .bottom{
         margin-top: -40px;
     }
-}
+
 </style>
