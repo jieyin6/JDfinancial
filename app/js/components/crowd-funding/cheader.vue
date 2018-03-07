@@ -1,10 +1,10 @@
 <template>
-   <div class="c-header">
+   <div :class="$style.cHeader">
       <img :src='header.banner'>
       <module :title="header.headerTitle" :more='header.more'>
          <ul>
              <li v-for="pic in header.pics" :key="pic">
-                 <img :src='pic'>
+                 <img :class="$style.img" :src='pic'>
              </li>
          </ul>
      </module>
@@ -29,19 +29,18 @@ export default {
 }
 </script>
 
-<style lang='scss'>
-.c-header{
+<style lang='scss' module>
+@import '../../../css/layout';
+@import '../../../css/element';
+.cHeader{
     position: relative;
     width: 100%;
     margin-bottom: 20px;
     padding-bottom: 40px;
     background: #fff;
-    img{
-        width: 100%;
-    }
+    
     ul{
-        display: flex;
-        justify-content: space-around
+        @include flex()
     }
 }
 </style>

@@ -3,7 +3,7 @@
     <c-header :header='crowdFunding.header'></c-header>
     <recommend :recommend='crowdFunding.recommend'></recommend>
     <more-welfare :moreWelfare='crowdFunding.moreWelfare'></more-welfare>
-    <bottom class="bottom"></bottom>
+    <bottom :class="$style.bottom"></bottom>
 </div>
 </template>
 

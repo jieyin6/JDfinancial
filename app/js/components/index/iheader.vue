@@ -1,11 +1,11 @@
 <template>
-  <div class="iheader">
+  <div :class="$style.marginBottom">
     <slider :isFlag='true' :pics='sliderPic'></slider>
-      <div class="menu-wrapper">
+      <div :class="$style.menuWrapper">
           <ul>
               <li v-for="item in menu" :key="item.name">
                   <img :src="item.img">
-                  <span class="menu-name">{{item.name}}</span>
+                  <span>{{item.name}}</span>
               </li>
           </ul>
       </div>
@@ -35,12 +35,12 @@ export default {
 }
 </script>
 
-<style lang='scss'>
+<style lang='scss' module>
+@import '../../../css/element';
 @import '../../../css/layout';
-.menu-wrapper{
+.menuWrapper{
         position: relative;
         padding-top:40px;
-        margin-bottom: 20px; 
         background: #fff;
         ul{
            @include flex();

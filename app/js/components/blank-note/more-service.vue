@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.marginBottom">
+  <div :class="[$style.marginBottom,$style.paddingBottom]">
       <module :title="moreService.serviceTitle">
           <div :class="$style.serviceContent">
               <ul>
@@ -38,5 +38,8 @@ export default {
 <style lang='scss' module>
 @import '../../../css/element';
     
-
+.paddingBottom{
+    background-color: #fff;
+    padding-bottom: 40px;
+}
 </style>

@@ -1,14 +1,14 @@
 <template>
-  <div class="blank-note-wrapper">
+  <div :class="$style.marginBottom">
       <module :title="noteItem.noteTitle">
           <ul>
-              <li v-for="item in noteItem.welfare" :key="item.name" class="note-item">
+              <li v-for="item in noteItem.welfare" :key="item.name" :class="$style.manageItem">
                   <img :src="item.icon">
-                  <div class="note-content">
+                  <div :class="$style.manageContent">
                       <h2>{{item.name}}</h2>
                       <p>{{item.desc}}</p>
                   </div>
-                  <p class="note-right">{{item.right}}</p>
+                  <p :class="$style.right">{{item.right}}</p>
               </li>
           </ul>
       </module>
@@ -33,8 +33,9 @@ export default {
 }
 </script>
 
-<style lang='scss'>
- .blank-note-wrapper{
+<style lang='scss' module>
+@import '../../../css/element';
+/* .blank-note-wrapper{
         margin-bottom: 20px;
          .note-item{
             position: relative;
@@ -85,5 +86,5 @@ export default {
                 }
             
         }
-    }
+    }*/
 </style>

@@ -32,6 +32,9 @@ export default {
 
 <style lang='scss' module>
 @import '../../../css/element';
-
+.moreWrapper{
+    position: relative;
+    top: 20px;
+}
 
 </style>

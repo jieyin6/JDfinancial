@@ -1,5 +1,5 @@
 <template>
-   <div class="new-wrapper">
+   <div class="new-product">
         <module :title="newProduct.newTitle" :more='newProduct.more'>
            <slider :pics='newProduct.newContent' :options='options'></slider>
         </module>
@@ -36,9 +36,9 @@ export default {
 }
 </script>
 
-<style lang='scss'>
- .new-wrapper{
-        margin-bottom: 20px;
+<style lang='scss' scoped>
+ .new-product{
+     margin-bottom: 20px;
         .swiper-container{
             box-sizing: border-box;
             padding:0 24px;
@@ -53,5 +53,5 @@ export default {
                 }
             }
         }
-    }
+ }
 </style>

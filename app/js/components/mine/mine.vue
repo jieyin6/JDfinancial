@@ -3,7 +3,7 @@
       <mine-header :bottom='mine.bottom'></mine-header>
       <center></center>
       <mine-more :mineMore='mine.mineMore'></mine-more>
-      <bottom class="mine-bottom"></bottom>
+      <bottom :class="$style.mineBottom"></bottom>
   </div>
 </template>
 
@@ -35,7 +35,7 @@ export default {
 
 <style lang='scss' module>
 @import '../../../css/element';
-    .mine-bottom{
+    .mineBottom{
         position: relative;
         top: 20px;
     }

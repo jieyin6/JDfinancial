@@ -38,7 +38,7 @@ export default {
 }
 </script>
 
-<style lang='scss'>
+<style lang='scss' scoped>
      .insurance-wrapper{
         margin-bottom: 20px;
         .content-wrapper{
